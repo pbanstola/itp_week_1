@@ -1,3 +1,5 @@
+# ITP Week 1 Day 2 (In-Class) Practice #2
+
 # This is a number magic trick
 # Pick a number from 1 - 9
 # Multiple by 2

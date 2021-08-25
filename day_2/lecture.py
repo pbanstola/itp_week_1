@@ -60,16 +60,50 @@ print(type(exampleInt))
 
 # 1. int() - constructs an integer number from:
     # - integer literal
+
+a = int(1)
+
     # - float literal (by removing all decimals),
+
+b = int(12.5)
+print(b) # 12
+
     # - string literal (providing the string represents a whole number)
+
+c = int("12")
+print(c) # 12
+
+# d = int("12.5") # ERROR
+
 # 2. float() - constructs a float number from:
     # - integer literal
+
+e = float(12)
+print(e) # 12.0
+
     # - float literal
+
+f = float(12.5)
+
     # - string literal (providing the string represents a float or an integer)
+
+g = float("100")
+print(g) # 100.0
+
 # str() - constructs a string from a wide variety of data types, including:
     # - strings
+
+h = str("sdoaregmrig")
+
     # - integer literals
+
+i = str(1)
+print(i) # "1"
+
     # - float literals
+
+j = str(1230.4534534634565)
+print(j) # "1230.453454634565"
 
 # The other two are boolean and complex casting.
 
@@ -91,7 +125,7 @@ print(type(exampleInt))
 sum = 4 + 4
 sub = 1 - 100 # it can evaluate to negatives too!
 div = 10/5 # even if it divides evenly, it returns a float.
-floor = 10/3 # to only get whole numbers, we use floor division.
+floor = 10//3 # to only get whole numbers, we use floor division.
 
 # ASSIGNMENT OPERATORS
 
@@ -110,6 +144,9 @@ floor = 10/3 # to only get whole numbers, we use floor division.
 # The arithmetic assignment operators only work on Python Numbers.
 
 x = 3
+# x = x + 6
+# x = 3 + 6
+# x = 9
 x += 6
 print(x) # 9
 
@@ -173,15 +210,37 @@ a <= b # True
 
 # Operator	Description	Example
 # and 	Returns True if both statements are true	                x < 5 and  x < 10
+
+a > 2 and b == c
+# 4 > 2 = True (left side first)
+# True and b == c
+# True and 5 == 5
+# True and True
+# True
+
+
 # or	Returns True if one of the statements is true	            x < 5 or x < 4
-# not	Reverse the result, returns False if the result is true	    not(x < 5 and x < 10)
+
+a > 2 or b != c
+
+# 4 > 2 = True (left side first)
+# True or b != c
+# True or 5 != 5
+# True or False
+# True
+
+# not	Reverse the result, returns False if the result is true	    not(x < 5 or x < 10)
+
+light_switch_on = True
+
+opposite_of_lights_on = not(light_switch_on)
 
 chesty_puller_age = 2021 - 1776
 college_graduate_age = 21
 able_to_rent_a_car = 25
 able_to_purchase_alcohol = 21
 
-chesty_puller_age >= able_to_purchase_alcohol and chesty_puller_age >= able_to_purchase_alcohol # True
+chesty_puller_age >= able_to_purchase_alcohol and chesty_puller_age >= able_to_rent_a_car # True
 college_graduate_age >= able_to_purchase_alcohol and college_graduate_age >= able_to_rent_a_car # False
 college_graduate_age >= able_to_purchase_alcohol or college_graduate_age >= able_to_rent_a_car # True
 not(college_graduate_age >= able_to_purchase_alcohol and college_graduate_age >= able_to_rent_a_car) # True
@@ -210,8 +269,16 @@ f = 33
 if e == f: # careful comparing equals
     print("e is equal to f")
 elif e > f:
-    print("He is greater than f")
+    print("e is greater than f")
 else:
     print("e is less than f")
 
-##### ****INDENTATION**** #####
+# NOTE: KEEP IN MIND
+# 1. Careful comparing equals! If you do a single =, you will get an error
+    # you cannot assign as a condition statement.
+# 2. You can use multiple elif!
+    # it will find the first one that suffices the condition
+    # if not, it will execute the else statement
+# 3. Since it only returns the first condition, order matters!
+# 4. Multiple if statements won't conflict but single else and elif will!
+# 5. INDENTATION IS SUPER IMPORTANT

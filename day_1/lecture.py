@@ -47,16 +47,28 @@ print("CHANGE_ME")
 # Example
 'He said "What is your name?"'
 
+'hi this line 1'
+'this is line 2'
+'this is not efficient'
+
 # Instead of creating multiple different string literals for each line,
 # there are two ways to create multiple line strings.
 # new-line and multi-line
 
-"this is an example of using \nnewline, which uses backspace"
+print("this is an example of using \nnewline, which uses backspace")
 
 """A multi-line uses tripe quotation marks,
 which both single or double doesn't matter
 as long as they are the same, at the beginning
 and end of the string"""
+
+'''
+difvdgbdfjn
+dfhb
+ftggf
+hjg
+actual_code()
+'''
 
 # practice.py
 
@@ -67,6 +79,8 @@ and end of the string"""
 # Assignment is done with a SINGLE equal sign (=)
 
 # Unlike other programming languages, it doesnt not require a command for declaring a variable.
+
+my_variable = "a string"
 
 # Rules for variable names
 # must start with a letter or the underscore character
@@ -80,17 +94,17 @@ and end of the string"""
     # 2. myFavoriteBand - Camel Case
     # 3. my_favorite_band - Snake Case
 
-name = "Daniel"
-
 # Now, instead of printing string literals, we can print variables which store the string!
+
+name = "Danny"
 
 # Change the name above to your name and uncomment the line below!
 
-# print(name)
+print(name)
 
 # We can combine like-elements, even as variables. (STRING CONCATENATION)
 
-# print("Hello my name is " + name)
+print("Hello my name is " + name)
 
 # INPUT
 
@@ -101,3 +115,7 @@ name = "Daniel"
 # We can take the user input and assign it to a variable.
 
 # Review the hello.py to see an example.
+
+user_age = input("What is your age?")
+
+print("Wow, you look good for " + user_age)

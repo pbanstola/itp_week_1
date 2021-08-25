@@ -10,7 +10,7 @@
 
 ### Task 1
 - [ ] Create an [GitHub](www.github.com) account.
-- [ ] **FORK** the [VetsInTech ITP Week 1 Repo](www.github.com/VetsInTech/ITP_week_1) repository.\
+- [ ] **FORK** the [VetsInTech ITP Week 1 Repo](www.github.com/Vets-In-Tech/ITP_week_1) repository.\
 *If you have done this successfully if you see your-username/ITP_week_1 in the upper left corner*
 
 Welcome Brief (15 Minutes)
@@ -18,7 +18,7 @@ Welcome Brief (15 Minutes)
 ### Task 2
 - [ ] On a new tab in your browser, download [VS Code](https://code.visualstudio.com/) and install it
 - [ ] Download [Git](https://git-scm.com/) and install (default)
-- [ ] Windows Only: Also download and install Windows: [Git Bash](https://gitforwindows.org/)
+- [ ] Windows Only: Also download and install [Git Bash](https://gitforwindows.org/)
 - [ ] Click the green **CLONE** button, which will display a modal, and copy the link provided.\
 ***Save this link***
 - [ ] Terminal/Git Bash: cd ~/Desktop and git clone [paste link]

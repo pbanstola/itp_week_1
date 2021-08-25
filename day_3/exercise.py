@@ -13,7 +13,7 @@ lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n
 # 1. create a new variable called uppercase with an empty list
 
 # 2. loop through the lowercase list
-    # 2a. append the capitalization of each element to uppercase
+    # 2a. append the capitalization of each element to the uppercase list
 
 # HARD
 
@@ -34,7 +34,7 @@ special_char = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
 # using list(string) NOTE: assign it a new variable as such:
 # password_list = list(password) prior to looping.
 
-# 3. In each iteration of the loop, create a if statement
+# 3. For each iteration of the loop, create a if statement
 # check to see if it exists in any of the list by using IN
 # if it does exist, update the appropriate variable and CONTINUE
 # not break.

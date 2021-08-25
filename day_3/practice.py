@@ -62,7 +62,7 @@ us_state = ["Alabama",
 
 # print("My state is: " + us_state[my_state_index])
 
-# 4.Using your state index, let's emphasize some importance to it by capitalizing it.
+# 4.Using your state index, let's emphasize some importance to it by *upper*casing it.
 
 # 5. POOF. You've been promoted to President! Let's add a new state. I like my list to be alphabetical (which it is)
 # So let's go ahead and create a state that starts with Z and append it to the end of the list.

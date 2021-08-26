@@ -53,7 +53,7 @@ list_3 = [True, False, False]
     # A list can contain different data types:
 
 list_4 = ["abc", 34, True, 40, "male"]
-list_5 = [["John", "Smith"], ["Jane", "Doe"]]
+list_5 = [["John", "Smith", 1,2,5,345,34,True,"asdoij"], ["Jane", "Doe"], 123, False]
 
 # type()
 # From Python's perspective, lists are defined as objects with the data type 'list':
@@ -64,7 +64,7 @@ print(type(list_5)) # <class 'list'>
 # You can retrieve the length of the list by wrapping the data collection with len().
 
 # EX: len(list_5)
-print(len(list_5)) # 2
+print(len(list_5))
 
 # The list() Constructor
 # It is also possible to use the list() constructor when creating a new list.
@@ -73,11 +73,18 @@ list_6 = list(("apple", "banana", "cherry")) # note the double round-brackets
 
 # ACCESS LIST ITEMS
 
+#            0         1         2         3        4       5         6
 fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
 
 # List items are indexed and you can access them by referring to the index number:
 
 print(fruits[0]) # "apple"
+
+# if i want mangos
+mango = fruits[6]
+
+# kiwi
+kiwi = fruits[4]
 
 # Negative Indexing
 # Negative indexing means start from the end
@@ -96,6 +103,13 @@ print(fruits[2:5]) # what does this return?
 
 # NOTE: beginning is included, end is not included.
 
+
+short_fruits_list = fruits[2:5]
+
+print(type(short_fruits_list)) # list
+
+
+
 # By leaving out the start value, the range will start at the first item:
 
 print(fruits[:4]) # "apple", "banana", "cherry", "orange" # NOT INCLUDE KIWI
@@ -109,14 +123,24 @@ print(fruits[2:]) # "cherry", "orange", "kiwi", "melon", "mango"
 
 print(fruits[-4:-1]) # "orange" (-4) to, but NOT including "mango" (-1)
 
+
+
+
 # To determine if a specified item is present in a list use the `in` keyword:
 
 if "apple" in fruits:
   print("Yes, 'apple' is in the fruits list")
 
+
+
+
+
+
+
+
 # CHANGE LIST ITEMS
 
-# fruits = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+# fruits = ["strawberry", "blackcurrant", "watermelon", "orange", "kiwi", "melon", "mango"]
 # for reference, without scrolling up..
 
 # To change the value of a specific item, refer to the index number:
@@ -128,11 +152,24 @@ fruits[0] = "strawberry"
 
 fruits[1:3] = ["blackcurrant", "watermelon"]
 
+
+
+
+
+
+
+
+
+
+
+
 # If you insert more items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly:
 # Change the second value by replacing it with two new values:
-more_fruits = ["raspberry", "coconut", "pineapple"]
+more_fruits = ["raspberry", "coconut", "pineapple", 2342, 4554, 324, 4567, 23, 345 , 234,  4534 , 2342]
 
-more_fruits[1:2] = ["grape", "durian"]
+more_fruits[1:8] = ["grape", "durian"]
+
+print(len(more_fruits)) #
 
 # If you insert less items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly:
 # Change the second and third value by replacing it with one value
@@ -151,7 +188,7 @@ sports.append("lacrosse")
 
 # The insert() method inserts an item at the specified index:
 
-sports.insert(1, "basketball") # ["football", "basketball", "soccer", "baseball"]
+sports.insert(1, "basketball") # ["football", "basketball", "soccer", "baseball", "lacrosse"]
 
 # Extend List
 # To append elements from another list to the current list, use the extend() method.
@@ -159,6 +196,8 @@ sports.insert(1, "basketball") # ["football", "basketball", "soccer", "baseball"
 more_sports = ["hockey", "water polo"]
 
 sports.extend(more_sports)
+
+more_sports.extend(sports) # ['hockey', 'water polo', 'football', 'basketball', soccer', 'baseball', 'lacrosse']
 
 # REMOVE LIST ITEMS
 
@@ -197,6 +236,8 @@ long_important_list = ['imagine', 'this', 'list', 'is', 'filled', 'with', 'impor
 
 long_important_list.clear()
 
+print(long_important_list) # []
+
 # the variable and the list still exists but it will be empty.
 
 # Strings are handled similiarly to list.
@@ -205,6 +246,7 @@ long_important_list.clear()
 
 string = "daniel"
 string.capitalize()
+string.upper()
 print(string)
 
 # PRACTICE_1
@@ -226,7 +268,8 @@ while i < 6:
 
 # NOTE: remember to increment i, or else the loop will continue forever.
 
-# The while loop requires relevant variables to be ready, in this example we need to define an indexing variable, i, which we set to 1.
+# The while loop requires relevant variables to be ready, in this example we need to define an indexing variable, i,
+# which we set to 1.
 
 # With the break statement we can stop the loop even if the while condition is true:
 
@@ -248,12 +291,12 @@ while k < 6:
 
 # With the else statement we can run a block of code once when the condition no longer is true:
 
-l = 1
-while l < 6:
+l = 100
+while l < 100:
   print(l)
   l += 1
 else:
-  print("l is no longer less than 6")
+  print("l is no longer less than 100")
 
 # (OLD SCHOOL) FOR LOOP
 
@@ -297,6 +340,11 @@ string_array = ["Hello", "World"]
 for x in string_array:
     print(x)
 
+names = ["Dan", "John", "Chuck", "Bob"]
+
+for name in names:
+  print("Hello " + name)
+
 # NOTE: the x variable can be set to whatever you want
 # If we had an array of numbers, I would call a single variable number (singular)
 # x is represent the element itself, unlike the index like java or JS
@@ -336,11 +384,11 @@ for x in range(2, 30, 3):
 # How do we use range with list?
 # loop through the index numbers of a list
 
-starter_pokemon = ['charmander', 'squirtle', 'bulbasaur']
+starter_pokemons = ['charmander', 'squirtle', 'bulbasaur']
 
-for x in range(len(starter_pokemon)):
-    print(x)
-    print(starter_pokemon[x])
+for starter_pokemon_index in range(3):
+    print(starter_pokemon_index)
+    print(starter_pokemons[starter_pokemon_index])
 
 # NOTE: for loops cannot be empty,
 # but if you for some reason have a for loop with no content,

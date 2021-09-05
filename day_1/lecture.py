@@ -14,7 +14,8 @@
 # Windows: Ctrl + /
 # Mac: Cmd + /
 # Now let's prevent the code below from running by commenting it out!
-eat_bad_pizza()
+
+#eat_bad_pizza()
 
 ##################################
 # dont worry about the error     #
@@ -45,11 +46,11 @@ print("CHANGE_ME")
 # There is no difference unless you need to nest one in another.
 
 # Example
-'He said "What is your name?"'
+print('He said "What is your name?"')
 
-'hi this line 1'
-'this is line 2'
-'this is not efficient'
+print('hi this line 1')
+print('this is line 2')
+print('this is not efficient')
 
 # Instead of creating multiple different string literals for each line,
 # there are two ways to create multiple line strings.
@@ -96,7 +97,7 @@ my_variable = "a string"
 
 # Now, instead of printing string literals, we can print variables which store the string!
 
-name = "Danny"
+name = "Purushottam"
 
 # Change the name above to your name and uncomment the line below!
 
@@ -116,6 +117,6 @@ print("Hello my name is " + name)
 
 # Review the hello.py to see an example.
 
-user_age = input("What is your age?")
+user_age = input("What is your age? ")
 
 print("Wow, you look good for " + user_age)

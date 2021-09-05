@@ -84,7 +84,7 @@ print(e) # 12.0
     # - float literal
 
 f = float(12.5)
-
+print(f)
     # - string literal (providing the string represents a float or an integer)
 
 g = float("100")
@@ -124,8 +124,10 @@ print(j) # "1230.453454634565"
 
 sum = 4 + 4
 sub = 1 - 100 # it can evaluate to negatives too!
+print(sub) #-99
 div = 10/5 # even if it divides evenly, it returns a float.
-floor = 10//3 # to only get whole numbers, we use floor division.
+print(div) #2.0
+floor = 10//3 # to only get whole numbers, we use floor division. Output is 3 here
 
 # ASSIGNMENT OPERATORS
 
@@ -153,8 +155,12 @@ print(x) # 9
 y += 3
 # NameError: name 'y' is not defined
 
-y = "3"
-y += 3
+# y = "3" # work around y = int("3")
+# y += 3
+
+y = int("3")
+y += 6
+print(y) # output 9
 # TypeError: can only concatenate str (not "int") to str
 
 # BOOLEANS

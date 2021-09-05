@@ -21,11 +21,11 @@ else:
 bonus_age = input("What's your age buddy? ")
 try:
     int_bonus_age = int(bonus_age)
-
+    print(type(int_bonus_age))
     if int_bonus_age >= 21:
         print("Welcome!")
     else:
         diff = 21 - int_user_age
         print("Come back in " + str(diff) + " years!")
 except:
-    print("input a valid age...")
+     print("input a valid age...")

@@ -152,25 +152,14 @@ fruits[0] = "strawberry"
 
 fruits[1:3] = ["blackcurrant", "watermelon"]
 
-
-
-
-
-
-
-
-
-
-
-
 # If you insert more items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly:
 # Change the second value by replacing it with two new values:
 more_fruits = ["raspberry", "coconut", "pineapple", 2342, 4554, 324, 4567, 23, 345 , 234,  4534 , 2342]
 
 more_fruits[1:8] = ["grape", "durian"]
 
-print(len(more_fruits)) #
-
+print(len(more_fruits)) # 7
+print(more_fruits) # ['raspberry', 'grape', 'durian', 345, 234, 4534, 2342]
 # If you insert less items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly:
 # Change the second and third value by replacing it with one value
 
@@ -182,13 +171,21 @@ print(len(more_fruits)) #
 sports = ["football","soccer","baseball"]
 
 sports.append("lacrosse")
+print(sports)
 
 # Insert Items
 # To insert a list item at a specified index, use the insert() method.
 
 # The insert() method inserts an item at the specified index:
 
-sports.insert(1, "basketball") # ["football", "basketball", "soccer", "baseball", "lacrosse"]
+  # sports.insert(1, "basketball") # ["football", "basketball", "soccer", "baseball", "lacrosse"]
+
+  # sports = ["football","soccer","baseball"]
+
+  # sports.append("lacrosse")
+sports.insert(1, "basketball")
+print(sports)
+
 
 # Extend List
 # To append elements from another list to the current list, use the extend() method.
@@ -230,6 +227,8 @@ del car_make # poof, the list is gone
 # Clear the List
 # The clear() method empties the list.
 
+  # car_make.clear()
+  # print(car_make)
 # The list still remains, but it has no content.
 
 long_important_list = ['imagine', 'this', 'list', 'is', 'filled', 'with', 'important', 'stuff']

@@ -5,16 +5,24 @@
 lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 # 1. loop through the lowercase and print each element
-
+character_list = []
+for character in lowercase :
+    print(character)
+   # character_list.append(character)
+    #print(character_list)
 # 2. loop through the lowercase and print the capitalization of each element
-
+for character in lowercase :
+    print(character.capitalize())
+   #print(character.upper())
 # MEDIUM
 
 # 1. create a new variable called uppercase with an empty list
-
+uppercase = []
 # 2. loop through the lowercase list
     # 2a. append the capitalization of each element to the uppercase list
-
+for character in lowercase :
+    uppercase.append(character)
+    print(uppercase)
 # HARD
 
 # A safe password has a minimum of (1) uppercase, (1) lowercase, (1) number, (1) special character.
@@ -28,23 +36,53 @@ special_char = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
     # has_lowercase
     # has_number
     # has_special_char
-
+has_uppercase = False
+has_lowercase = False
+has_number = False
+has_special_char = False
 # 2. loop through the string password (same as a list)
 # OR you can create a new list variable of the string password
 # using list(string) NOTE: assign it a new variable as such:
 # password_list = list(password) prior to looping.
+password_list = list(password) 
+for character in password_list :
+    print(character)
+
+# password_list = list(password)
+# print(password_list)
 
 # 3. For each iteration of the loop, create a if statement
 # check to see if it exists in any of the list by using IN
 # if it does exist, update the appropriate variable and CONTINUE
 # not break.
-
+empty_list = []
+for character in password_list :
+    if character in special_char :
+        empty_list.append(character)  
+    else:
+        print("appropriate variable")  
+        continue
 # NOTE: to see if it has a number, use range from 0 - 10!
 
 # 4. do a final check to see if all of your variables are TRUE
 # by using the AND operator for all 4 conditions. (This is done for you, uncomment below)
 
+# password = "MySuperSafePassword!@34"
+
+# special_char = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
+
+# has_uppercase = False
+# has_lowercase = False
+# has_number = False
+# has_special_char = False
+
 # final_result = has_uppercase == True and has_lowercase == True and has_number == True and has_special_char == True
+# print(final_result)
+# if (final_result == True) :
+#     print("SAFE STRONG PASSWORD")
+# else:
+#     print("Update password: too weak")
+
 
 # NOTE: we can shorthand this by just checking if the variable exists (returns True)
 #final_result_shorthand = has_uppercase and has_lowercase and has_number and has_special_char
